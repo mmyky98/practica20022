@@ -62,3 +62,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+#setup practica 2022
+git config core.fileMode false
+
+copiati .env.example in .env
+
+ca root: docker-compose up -d
+docker exec -it practica2022_practica-app_1 bash
+composer install
+php artisan key:generate
+php artisan migrate --seed
+chmod -R 777 storage/
+
+go to:
+http://localhost/
+http://localhost/adminer.php?server=practica-mysql&username=root&db=practica
+
