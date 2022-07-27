@@ -33,6 +33,14 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('categories-tree', [CategoryController::class, 'tree']);
 
     Route::get('/products', [ProductController::class, 'getAll']);
+    Route::post('/products/add', [ProductController::class, 'add']);
+    Route::get('/products/{id}', [ProductController::class, 'get']);
+    Route::put('/products/{id}/update', [ProductController::class, 'update']);
+    Route::delete('/products/{id}/delete', [ProductController::class, 'delete']);
+    Route::get('/products-tree', [ProductController::class, 'tree']);
+
+
+    Route::post('/forgotPassword', [UserController::class, 'forgotPassword']);
 
 
     //To know how to upload images and Test routes
